@@ -1,0 +1,1301 @@
+/*------------------------------------------------------
+    Template
+--------------------------------------------------------*/
+:root {
+    --primary: #06A3DA;
+    --secondary: #34AD54;
+    --light: #EEF9FF;
+    --dark: #091E3E;
+}
+
+
+/*-----------------------------------------------------
+    All 
+-----------------------------------------------------*/
+a {
+    text-decoration: none;
+}
+
+
+/*-----------------------------------------------------
+    Spinner
+------------------------------------------------------*/
+.spinner {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    margin: 100px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
+    }
+
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*-----------------------------------------------------
+    Top bar
+------------------------------------------------------*/
+#top_bar small {
+    font-family: 'Rubik', sans-serif;
+    color: var(--light);
+    position: relative;
+} 
+
+#top_bar h6 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#top_bar .fa-brands {
+    font-size: 24px;
+    color: var(--light);
+}
+
+#top_bar .fa-brands:hover {
+    color: var(--primary);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/*-----------------------------------------------------
+    Nav. bar
+-------------------------------------------------------*/
+header .navbar-brand h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    padding-left: 25px;
+    color: var(--light);
+}
+
+header .navbar-brand h1 i {
+    margin-right: 3%;
+}
+
+header #navbarSupportedContent ul li a {
+    font-family: 'Nunito', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--light);
+    padding: 0px 12px;
+}
+
+header #navbarSupportedContent ul li a:hover {
+    color: var(--primary);
+    transition: all 0.3s ease-in-out;
+}
+
+header .dropdown-menu .dropdown-item:hover {
+    background-color: #dfe6e9;
+    transition: all 0.3s ease-in-out;
+}
+
+header #navbarSupportedContent .dropdown-menu a {
+    color: var(--dark);
+    font-size: 16px;
+}
+
+.top_nav .navbar {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    background-color: transparent;
+    z-index: 100000;
+
+}
+
+.top_nav .search {
+    width: 250px;
+    position: relative;
+    display: flex;
+}
+
+.top_nav .search .searchTerm {
+    width: 100%;
+    border: 3px solid #06A3DA;
+    border-right: none;
+    padding: 10px;
+    height: 35px;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.top_nav .search .searchButton {
+    width: 40px;
+    height: 35px;
+    border: 3px solid #06A3DA;
+    text-align: center;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #06A3DA;
+}
+
+.top_nav .search i {
+    color: var(--light);
+}
+
+.top_nav .search .searchButton:hover {
+    background-color: var(--dark);
+    border-color: var(--dark);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/*----------------------------------------------------
+    Carousel
+-----------------------------------------------------*/
+#carouselExampleInterval h1 {
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+#carouselExampleInterval h5 {
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+}
+
+#carouselExampleInterval a {
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+}
+
+.carousel_banner .carousel-caption {
+    z-index: 1;
+    background: rgba(9, 30, 62, .7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.carousel_banner .carousel-item .free_quote {
+    border: 2px solid var(--primary);
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: var(--light);
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.carousel_banner .carousel-item .free_quote:hover {
+    color: var(--dark);
+    background: var(--primary);
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.carousel_banner .carousel-item .contact_us {
+    border: 2px solid var(--primary);
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: var(--light);
+    border-radius: 5px;
+}
+
+.carousel_banner .carousel-item .contact_us:hover {
+    color: var(--dark);
+    background: var(--light);
+    border: 2px solid var(--light);
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*----------------------------------------------------
+    Facts
+------------------------------------------------------*/
+.facts {
+    z-index: 2;
+}
+
+.facts .fa-solid {
+    font-size: 400%;
+}
+
+.facts h5 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.facts h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+
+/*--------------------------------------------------------
+    Section Title
+--------------------------------------------------------*/
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.section-title.text-center::before {
+    left: 50%;
+    margin-left: -75px;
+}
+
+.section-title.section-title-sm::before {
+    width: 90px;
+    height: 3px;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 5px;
+    bottom: 0px;
+    background: #FFFFFF;
+    -webkit-animation: section-title-run 5s infinite linear;
+    animation: section-title-run 5s infinite linear;
+}
+
+.section-title.section-title-sm::after {
+    width: 4px;
+    height: 3px;
+}
+
+.section-title.text-center::after {
+    -webkit-animation: section-title-run-center 5s infinite linear;
+    animation: section-title-run-center 5s infinite linear;
+}
+
+.section-title.section-title-sm::after {
+    -webkit-animation: section-title-run-sm 5s infinite linear;
+    animation: section-title-run-sm 5s infinite linear;
+}
+
+@-webkit-keyframes section-title-run {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 145px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes section-title-run {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 145px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@-webkit-keyframes section-title-run-center {
+    0% {
+        left: 50%;
+        margin-left: -75px;
+    }
+
+    50% {
+        left: 50%;
+        margin-left: 45px;
+    }
+
+    100% {
+        left: 50%;
+        margin-left: -75px;
+    }
+}
+
+@keyframes section-title-run-center {
+    0% {
+        left: 50%;
+        margin-left: -75px;
+    }
+
+    50% {
+        left: 50%;
+        margin-left: 45px;
+    }
+
+    100% {
+        left: 50%;
+        margin-left: -75px;
+    }
+}
+
+@-webkit-keyframes section-title-run-sm {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 85px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes section-title-run-sm {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 85px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+
+/*----------------------------------------------------
+    About
+-----------------------------------------------------*/
+.about_us {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+
+.about_us .section-title h5 {
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.about_us .section-title h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.about_us p {
+    font-size: 16px;
+    color: #636e72;
+    font-weight: 600;
+}
+
+.about_us .col-sm-6 h5 {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.about_us .col-sm-6 i {
+    color: var(--primary);
+}
+
+.about_us #phone h5 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.about_us #phone h4 {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.about_us #request_q {
+    background-color: var(--primary);
+    border: 0px;
+}
+
+.about_us #request_q:hover {
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    color: var(--dark);
+}
+
+
+/*------------------------------------------------------
+    Features
+-------------------------------------------------------*/
+.features {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+
+.features .section-title h5 {
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.features .section-title h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.features p {
+    font-size: 16px;
+    color: #636e72;
+    font-weight: 600;
+}
+
+.features h4 {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+
+/*------------------------------------------------------
+    Service
+-------------------------------------------------------*/
+.service {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+
+.service .section-title h5 {
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.service .section-title h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--dark)
+}
+
+.service h4 {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.service h3 {
+    font-weight: 700;
+}
+
+.service h2 {
+    font-weight: 800;
+}
+
+.service p {
+    font-size: 16px;
+    color: #636e72;
+    font-weight: 600;
+}
+
+.service .service-item {
+    position: relative;
+    height: 300px;
+    padding: 0 30px;
+    background-color: #eef9ff;
+}
+
+.service .service-item .service-icon {
+    margin-bottom: 30px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+}
+
+.service .service-item .service-icon i {
+    transform: rotate(45deg);
+}
+
+.service .service-item a.btn {
+    position: absolute;
+    width: 60px;
+    bottom: -48px;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+    background-color: var(--primary);
+    border: none;
+}
+
+.service .service-item:hover a.btn {
+    bottom: -24px;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*----------------------------------------------------------
+    Pricing plan
+-----------------------------------------------------------*/
+.pricing {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+
+.pricing .section-title h5 {
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.pricing .section-title h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--dark)
+}
+
+.pricing h4 {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.pricing small {
+    font-size: 14px;
+    color: #636e72;
+    font-weight: 700;
+}
+
+.pricing span {
+    font-weight: 600;
+    color: #636e72;
+}
+
+.pricing .palns {
+    position: relative;
+    background-color: #eef9ff;
+}
+
+.pricing i {
+    font-size: 20px;
+}
+
+.pricing .btn {
+    border: none;
+    background-color: var(--primary);
+}
+
+.pricing .btn:hover {
+    color: var(--dark);
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*-------------------------------------------------------
+   Quote
+-------------------------------------------------------*/
+.quote {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+
+.quote .section-title h5 {
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.quote .section-title h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--dark)
+}
+
+.quote h4 {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.quote p {
+    font-size: 16px;
+    color: #636e72;
+    font-weight: 600;
+}
+
+.quote .form-select,
+.form-control {
+    background-color: #eef9ff;
+}
+
+.quote [placeholder] {
+    font-weight: 600;
+}
+
+
+/*-------------------------------------------------------------
+    Testimonial 
+-------------------------------------------------------------*/
+.testimonial .testimonial-carousel .owl-dots {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+
+.testimonial .section-title h5 {
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.testimonial .section-title h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--dark)
+}
+
+.testimonial h4 {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.testimonial small {
+    font-size: 16px;
+    color: #636e72;
+    font-weight: 600;
+}
+
+.testimonial #p {
+    color: #636e72;
+    font-weight: 600;
+}
+
+.testimonial .testimonial-item {
+    background-color: #eef9ff;
+}
+
+.testimonial .testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: .5s;
+}
+
+.testimonial .testimonial-carousel .owl-dot.active {
+    width: 30px;
+    background: var(--primary);
+}
+
+.testimonial .testimonial-carousel .owl-item.center {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial .testimonial-carousel .owl-item .testimonial-item {
+    transition: .5s;
+}
+
+.testimonial .testimonial-carousel .owl-item.center .testimonial-item {
+    background:  #FFFFFF !important;
+    box-shadow: 0 0 30px #DDDDDD;
+}
+
+
+/*----------------------------------------------------------
+    Team 
+------------------------------------------------------------*/
+.team {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+
+.team .section-title h5 {
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.team .section-title h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--dark)
+}
+
+.team h4 {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.team p {
+    color: #636e72;
+    font-weight: 600;
+}
+
+.team .team-item {
+    background-color: #eef9ff;
+}
+
+.team-item {
+    transition: all 0.5s ease-in-out;
+}
+
+.team-social {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.team-social a.btn {
+    position: relative;
+    margin: 0 3px;
+    margin-top: 100px;
+    opacity: 0;
+}
+
+.team-item:hover {
+    box-shadow: 0 0 30px #DDDDDD;
+}
+
+.team-item:hover .team-social {
+    background: rgba(9, 30, 62, .7);
+}
+
+.team-item:hover .team-social a.btn:first-child {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s 0s;
+}
+
+.team-item:hover .team-social a.btn:nth-child(2) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .05s;
+}
+
+.team-item:hover .team-social a.btn:nth-child(3) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .1s;
+}
+
+.team-item:hover .team-social a.btn:nth-child(4) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .15s;
+}
+
+.team-item .team-img img,
+.blog-item .blog-img img  {
+    transition: .5s;
+}
+
+.team-item:hover .team-img img,
+.blog-item:hover .blog-img img {
+    transform: scale(1.15);
+}
+
+.team .btn {
+    background-color: var(--primary);
+    border: none;
+}
+
+.team .btn i {
+    color: var(--light);
+}
+
+.team .btn:hover {
+    background-color: #091E3E;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*-------------------------------------------------------------
+    Blog
+------------------------------------------------------------*/
+.blog {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+
+.blog .section-title h5 {
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.blog .section-title h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--dark)
+}
+
+.blog h4 {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.blog p {
+    color: #636e72;
+    font-weight: 600;
+}
+
+.blog .blog-item {
+    background-color: #eef9ff;
+}
+
+.blog .blog-img a {
+    color: var(--light);
+    background-color: var(--primary);
+}
+
+.blog .read_more {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.blog .read_more:hover {
+    color: var(--dark);
+    transition: all 0.5s ease-in-out;
+}
+
+.blog .blog-item small {
+    color: #636e72;
+    font-weight: 600;
+}
+
+.blog i {
+    color: var(--primary);
+}
+
+
+/*----------------------------------------------------------
+    Footer
+----------------------------------------------------------*/
+.footer {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    background-color: var(--dark);
+}
+
+.footer .footer-about {
+    background-color: var(--primary);
+}
+
+.footer .footer-about h1 {
+    color: var(--light);
+    font-weight: 800;
+}
+
+.footer .footer-about p {
+    color: var(--light);
+    font-weight: 600;
+}
+
+.footer .footer-about .input-group button {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.footer .section-title h3 {
+    font-weight: 700;
+}
+
+.footer .section-title i {
+    color: var(--light);
+}
+
+.footer .section-title p {
+    color: var(--light);
+    font-weight: 600;
+}
+
+.footer .fa-brands {
+    color: var(--light);
+    font-size: 25px;
+}
+
+.footer .fa-brands:hover {
+    color: var(--primary);
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .fa-solid {
+    color: var(--primary);
+    font-size: 15px;
+}
+
+.footer .links a {
+    color: var(--light);
+    padding-bottom: 10px;
+}
+ 
+.footer .links a:hover {
+    translate: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+/*** Miscellaneous ***/
+/*@media (min-width: 991.98px) {
+    .facts {
+        position: relative;
+        margin-top: -75px;
+        z-index: 1;
+    }
+}*/
+
+.back-to-top {
+    background-color: var(--primary);
+    border: none;
+    color: var(--light);
+}
+
+.back-to-top:hover {
+    background-color: var(--dark);
+    transition: all 0.3s ease-in-out;
+    color: var(--primary); 
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+/*.bg-header {
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.link-animated a {
+    transition: .5s;
+}
+
+.link-animated a:hover {
+    padding-left: 10px;
+}*/
+
+
+/*==========================================================================
+#carouselExampleInterval h1 {
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+#carouselExampleInterval h5 {
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+}
+
+#carouselExampleInterval a {
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+}
+
+.carousel_banner .carousel-caption {
+    z-index: 1;
+    background: rgba(9, 30, 62, .7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.carousel_banner .carousel-item .free_quote {
+    border: 2px solid var(--primary);
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: var(--light);
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.carousel_banner .carousel-item .free_quote:hover {
+    color: var(--dark);
+    background: var(--primary);
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.carousel_banner .carousel-item .contact_us {
+    border: 2px solid var(--primary);
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: var(--light);
+    border-radius: 5px;
+}
+
+.carousel_banner .carousel-item .contact_us:hover {
+    color: var(--dark);
+    background: var(--light);
+    border: 2px solid var(--light);
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+==========================================================================*/
+
+/*-------------------------------------------------------
+    carousel banner pages
+--------------------------------------------------------*/
+#carouselExampleSlidesOnly {
+    font-family: 'Nunito', sans-serif;
+}
+
+#carouselExampleSlidesOnly h1 {
+    font-size: 55px;
+    font-weight: 800;
+}
+
+#carouselExampleSlidesOnly a {
+    font-weight: 600;
+    color: var(--light);
+    font-size: 19px;
+}
+
+#carouselExampleSlidesOnly i {
+    font-weight: 19px;
+}
+
+#carouselExampleSlidesOnly .carousel-caption {
+    z-index: 1;
+    background: rgba(9, 30, 62, .7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+
+/*------------------------------------------------
+    Blogs page
+-------------------------------------------------*/
+.blogs_page .search_form input {
+    background-color: transparent;
+}
+
+.blogs_page .search_form button {
+    border: none;
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.blogs_page .search_form button:hover {
+    background-color: var(--dark);
+    transition: 0.3s;
+}
+
+
+.blogs_page .category {
+    font-family: 'Nunito', sans-serif;   
+}
+
+.blogs_page .category h5 {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.blogs_page .category a {
+    font-weight: 600;
+}
+
+.blogs_page .recent_post h5 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.blogs_page .recent_post .d-flex {
+    background-color: #eef9ff;
+}
+
+.blogs_page .recent_post .d-flex a {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.blogs_page .recent_post .d-flex a:hover {
+    color: var(--primary);
+    transition: 0.2s;
+}
+
+.blogs_page .tags h5 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.blogs_page .tags .d-flex a {
+    background-color: #eef9ff;
+    color: var(--dark);
+    font-weight: 600;
+    border-radius: 5px;
+} 
+
+.blogs_page .plain_text h5 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.blogs_page .plain_text p {
+    background-color: #eef9ff;
+    border-radius: 5px;
+}
+
+.blogs_page .plain_text a {
+    background-color: #eef9ff;
+    border-radius: 5px;
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.blogs_page .plain_text a:hover {
+    background-color: var(--primary);
+    color: var(--light);
+    transition: 0.3s;
+}
+
+
+/*----------------------------------------------------
+    Contact us page
+-----------------------------------------------------*/
+.contact_page {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+
+.contact_page .section-title h5 {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.contact_page h5 {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.contact_page .section-title h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--dark)
+}
+
+.contact_page h4 {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.contact_page .icon {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.contact_page input {
+    background-color: #eef9ff;
+}
+
+.contact_page button {
+    background-color: var(--primary);
+    border: none;
+    color: var(--light);
+}
+
+.contact_page button:hover {
+    background-color: var(--primary);
+    border: none;
+    color: var(--light);
+}
+
+.blog p {
+    color: #636e72;
+    font-weight: 600;
+}
+
+.blog .blog-item {
+    background-color: #eef9ff;
+}
+
+.blog .blog-img a {
+    color: var(--light);
+    background-color: var(--primary);
+}
+
+.blog .read_more {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.blog .read_more:hover {
+    color: var(--dark);
+    transition: all 0.5s ease-in-out;
+}
+
+.blog .blog-item small {
+    color: #636e72;
+    font-weight: 600;
+}
+
+.blog i {
+    color: var(--primary);
+}
